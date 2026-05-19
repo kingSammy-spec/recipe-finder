@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===== SEO META TAGS ===== -->
+    <meta name="description" content="ChefMate helps you discover thousands of delicious recipes by ingredient, cuisine, or diet. Find your next meal idea, save favourites, and cook like a pro.">
+    <meta name="keywords" content="recipe finder, recipe search, cooking app, meal ideas, food recipes, cuisine explorer, ingredients recipe">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ChefMate">
+    <link rel="canonical" href="./">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ChefMate | Discover Delicious Recipes & Meal Ideas">
+    <meta property="og:description" content="ChefMate helps you discover thousands of delicious recipes by ingredient, cuisine, or diet. Find your next meal idea, save favourites, and cook like a pro.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:site_name" content="ChefMate">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ChefMate | Discover Delicious Recipes & Meal Ideas">
+    <meta name="twitter:description" content="ChefMate helps you discover thousands of delicious recipes by ingredient, cuisine, or diet. Find your next meal idea, save favourites, and cook like a pro.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=1200&h=630&q=80">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "ChefMate",
+      "description": "ChefMate helps you discover thousands of delicious recipes by ingredient, cuisine, or diet. Find your next meal idea, save favourites, and cook like a pro.",
+      "applicationCategory": "Utility",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <!-- ========================= -->
+    <title>ChefMate | Discover Your Next Meal</title>
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
+    <link rel="stylesheet" href="style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody">
+                <!-- Detailed info injected here -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <div class="logo">Chef<span>Mate</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="What's in your fridge?">
+                <button aria-label="Button"><span class="btn-text">Search</span><span class="btn-icon">🔍</span></button>
+            </div>
+        </header>
+
+        <section class="trending-section">
+            <h2>Trending Recipes</h2>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=400&h=300&q=80" alt="Pasta">
+                    <div class="recipe-info">
+                        <h3>Creamy Garlic Pasta</h3>
+                        <div class="meta"><span>15 min</span> • <span>Easy</span></div>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&h=300&q=80" alt="Salad">
+                    <div class="recipe-info">
+                        <h3>Quinoa Power Bowl</h3>
+                        <div class="meta"><span>10 min</span> • <span>Healthy</span></div>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&h=300&q=80" alt="Salmon">
+                    <div class="recipe-info">
+                        <h3>Lemon Butter Salmon</h3>
+                        <div class="meta"><span>20 min</span> • <span>Gourmet</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 ChefMate. Cooking made social.</p>
+        </footer>
+    </div>
+
+    <!-- 1. Recipe Synchronization Celebration Modal -->
+    <div id="celebrationModal" class="modal" style="z-index: 12000; background: rgba(0, 0, 0, 0.94); display: none;">
+        <div class="modal-content" style="max-width: 500px; text-align: center; border-color: rgba(230, 126, 34, 0.2); box-shadow: 0 0 30px rgba(230, 126, 34, 0.1);">
+            <div style="font-size: 4rem; animation: pulse 2s infinite; margin-bottom: 1rem;">🍳</div>
+            <h2 style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 2.2rem; color: #d35400; margin-bottom: 0.5rem;">Recipe Synchronized</h2>
+            <p style="color: #888; font-size: 0.85rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">CULINARY STEPS LOADED</p>
+            <p style="color: #555; font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">Gourmet ingredient quantities, structural cooking steps, and caloric counts successfully loaded for your selected dish.</p>
+            <button class="ad-btn" id="btn-close-celebration" style="width: 100%; padding: 1rem; background: #e67e22; border-color: #e67e22; color:white;" aria-label="Btn Close Celebration">Start Cooking</button>
+        </div>
+    </div>
+
+    <!-- 2. Timed Interchanging Popup Ad -->
+    <div id="premiumUpgradeModal" class="modal" style="z-index: 10500; background: rgba(0, 0, 0, 0.95); display: none;">
+        <!-- Injected programmatically by script.js -->
+    </div>
+
+    <!-- 3. Interstitial Strategic Popup Ad -->
+    <div id="interstitialAdModal" class="modal" style="z-index: 11000; background: rgba(0, 0, 0, 0.96); display: none;">
+        <div class="modal-content" style="max-width: 580px; text-align: center; border-color: rgba(230, 126, 34, 0.15); box-shadow: 0 0 30px rgba(230, 126, 34, 0.08); padding: 3.5rem 2.5rem;">
+            <span class="ad-tag" style="font-size: 0.75rem; color: #d35400; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; display: inline-block;">GOURMET SPONSOR</span>
+            
+            <div class="ad-sponsor-container" style="display: flex; gap: 2rem; text-align: left; align-items: center; margin-bottom: 3rem;">
+                <img id="interstitial-ad-img" src="https://picsum.photos/seed/food/200/200" alt="Sponsor" style="width: 130px; height: 130px; border-radius: 12px; object-fit: cover; border: 1px solid #eee; filter: grayscale(0.1) contrast(1.15);">
+                <div>
+                    <h3 id="interstitial-ad-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.4rem; text-transform: uppercase; margin-bottom: 0.5rem; color: #333;">Blue Apron gourmet</h3>
+                    <p id="interstitial-ad-desc" style="color: #666; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Enjoy premium ingredients and chef-quality recipe guides delivered to your doorstep. $110 off first boxes.</p>
+                    <div id="interstitial-ad-promo" style="font-size: 0.8rem; font-weight: 800; color: #d35400; letter-spacing: 0.5px;">CLAIM THIS EXCLUSIVE RATE NOW</div>
+                </div>
+            </div>
+            
+            <div style="display: flex; gap: 1.5rem;">
+                <button class="btn-secondary" id="btn-skip-ad" style="flex: 1; padding: 1rem; opacity: 0.4; cursor: not-allowed; border: 1px solid #ccc; background: none; font-weight:700;" disabled aria-label="Btn Skip Ad">
+                    Skip Ad in 5s
+                </button>
+                <button class="ad-btn" id="btn-claim-ad" style="flex: 1; padding: 1rem; background: #e67e22; border-color: #e67e22; color:white;" aria-label="Btn Claim Ad">
+                    Claim Coupon
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Floating Rotating Promo Banner -->
+    <div class="floating-ad-banner" id="floating-ad-banner" style="display: none;">
+        <!-- Injected programmatically by script.js -->
+    </div>
+
+
+
+    <script src="script.min.js"></script>
+
+</body>
+</html>
